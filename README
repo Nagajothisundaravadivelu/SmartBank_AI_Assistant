@@ -1,0 +1,23 @@
+SmartBank AI - Updated files
+
+Replace these three files in your existing project folder:
+- app.py
+- banking_tools.py
+- customer_db.py
+
+Keep your existing .env file and loan_api.py. Do not overwrite your .env file.
+The existing .env should contain GROQ_API_KEY=your_key (do not share the key).
+
+Run in terminal 1:
+venv\Scripts\activate
+python -m uvicorn loan_api:app --host 127.0.0.1 --port 8081 --reload
+
+Run in terminal 2:
+venv\Scripts\activate
+python -m streamlit run app.py
+
+Open http://localhost:8501
+
+The app creates smartbank.db automatically and inserts CUST001 if it does not already exist.
+New customers receive IDs like CUST002, CUST003, etc.
+Loan application submission still requires the confirmation checkbox and uses the mock FastAPI endpoint.

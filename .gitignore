@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local databases
+*.db
+*.sqlite3
+smartbank.db
